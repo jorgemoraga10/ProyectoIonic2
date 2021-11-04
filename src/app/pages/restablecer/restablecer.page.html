@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="container">
+      <div class="tla">
+        <img src="assets/img/tla.PNG" alt="">
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <h2>Restablecer contraseña</h2>
+  <br>
+
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Ingresa tu nombre de usuario</ion-label>
+      <ion-input formControlName="user" type="text" ></ion-input>
+    </ion-item>
+
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.user.errors?.required">
+    Usuario es requerido.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.user.errors?.minlength">
+    Debe Contener 3 caracteres minimo.
+    </span>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button  class="centrar" type="submit" color="success" expand="block">Recuperar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

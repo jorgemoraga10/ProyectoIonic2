@@ -1,0 +1,37 @@
+
+
+* {
+    font-family:  Georgia,Garamond;
+}
+
+.body{ 
+    background-color: gray;
+}
+
+
+.container{
+    padding-right: 45%;
+}
+
+.tla{
+    width: 200%;
+    white-space: auto;
+}    
+
+.auto{
+    width: 500px;
+    padding-right: 100%;
+}    
+
+
+
+.rest:hover{
+    color: red;
+    text-decoration-line: underline;
+}    
+
+
+
+.error{
+    color: red;
+}

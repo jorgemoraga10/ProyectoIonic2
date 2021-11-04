@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="container">
+      <div class="tla">
+        <img src="assets/img/tla.PNG" alt="">
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+
+  
+  <ion-item>
+    <div clas="auto">
+      <img src="assets/img/auto1.PNG"/>
+    </div>
+  </ion-item>
+
+
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input formControlName="user" type="text"  [(ngModel)]="user"></ion-input>
+    </ion-item>
+
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.user.errors?.required">
+    Usuario es requerido.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.user.errors?.minlength">
+    Debe Contener 3 caracteres minimo.
+    </span>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="password" type="password"  [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+    Contraseña es requerida.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.minlength">
+    Debe contener 5 caracteres minimo
+    </span>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="success" expand="block">Ingresar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+
+
+
+  <div class="ion-text-center">
+    <ion-router-link class="rest" (click)="registro()">Registrate!</ion-router-link >
+  </div>
+  
+  <div class="ion-text-center">
+    <ion-router-link class="rest" (click)="restablecer()">Restablecer Contraseña</ion-router-link >
+  </div>
+
+</ion-content>

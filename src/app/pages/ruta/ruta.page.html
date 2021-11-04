@@ -1,0 +1,48 @@
+
+<ion-header>
+  <ion-toolbar>
+    <div class="container">
+      <div class="tla">
+        <img src="assets/img/tla.PNG" alt="">
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <img src="assets/img/Mapa2.jpg">
+    <ion-fab right top>
+      <button ion-fab>
+        <ion-icon name="pin"></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-item>
+      <ion-icon name="flag" item-start large></ion-icon>
+      &nbsp; &nbsp;
+      <h4>Origen: {{ori}}</h4>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-icon name="home" item-start large ></ion-icon>
+      &nbsp; &nbsp;
+      <h4 >Destino: {{dest}}</h4>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="alarm" item-start large ></ion-icon>
+      &nbsp; &nbsp;
+      <span item-start>18 min</span>
+      <span item-start>(2.6 mi)</span>
+    </ion-item>
+  </ion-card>
+  
+  <br>
+
+  <ion-button  class="centrar" expand="block" (click)="opina()">OPINA!</ion-button>
+  <ion-button  class="centrar" expand="block" (click)="volver()">VOLVER</ion-button>
+
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar>
+    <div class="container">
+      <div class="tla">
+        <img src="assets/img/tla.PNG" alt="">
+      </div>
+    </div>
+  </ion-toolbar>
+
+<ion-toolbar>
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="viaje">
+      <ion-icon name="car-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="cuenta">
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="soporte">
+      <ion-icon name="help-circle-outline"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-router-outlet></ion-router-outlet>
+  
+</ion-content>

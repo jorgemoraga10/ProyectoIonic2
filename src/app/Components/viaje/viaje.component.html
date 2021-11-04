@@ -1,0 +1,55 @@
+<ion-content>
+  <ion-item>
+    <ion-icon name="person" item-start large></ion-icon>
+    &nbsp; &nbsp;
+    <h4  class="bienvenido" >Bienvenido: {{user}} </h4>
+  </ion-item>
+  
+  <!-- <ion-item>
+    <img #MyRef src="assets/img/Mapa2.jpg" />
+  </ion-item> -->
+
+  <div #map id="map"></div>
+
+
+
+  
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+  
+    <ion-item lines="full">
+      <ion-label position="floating">Ingresa tu Origen</ion-label>
+      <ion-input formControlName="origen" type="text" [(ngModel)]="ori"></ion-input>
+    </ion-item>
+  
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.origen.errors?.required">
+      Origen es requerido.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.origen.errors?.minlength">
+      Debe Contener 3 caracteres minimo.
+    </span>
+  
+    <ion-item lines="full">
+      <ion-label position="floating">Ingresa tu Destino</ion-label>
+      <ion-input formControlName="destino" type="text" [(ngModel)]="dest"></ion-input>
+    </ion-item>
+  
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.destino.errors?.required">
+      Destino es requerido.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.destino.errors?.minlength">
+      Debe contener 3 caracteres minimo
+    </span>
+     
+    <ion-row>
+      <ion-col>
+        <ion-button class="centrar" type="submit" expand="block">
+          Te Llevo
+          <ion-icon name="reload" slot="end" #loadingIcon></ion-icon>
+        </ion-button>  
+      </ion-col>
+    </ion-row>
+  </form>
+  
+  <ion-button  class="centrar" expand="block" (click)="salir()">SALIR</ion-button> 
+  
+</ion-content>

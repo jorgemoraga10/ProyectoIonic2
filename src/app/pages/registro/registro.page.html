@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="container">
+      <div class="tla">
+        <img src="assets/img/tla.PNG" alt="">
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <br>
+  <h1>Registro de Usuario</h1>
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Ingresa tu Usuario</ion-label>
+      <ion-input formControlName="user" type="text"  [(ngModel)]="user"></ion-input>
+    </ion-item>
+
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.user.errors?.required">
+    Usuario es requerido.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.user.errors?.minlength">
+    Debe Contener 3 caracteres minimo.
+    </span>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Ingresa tu Contraseña</ion-label>
+      <ion-input formControlName="password" type="password"  [(ngModel)]="pass"></ion-input>
+    </ion-item>
+    
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+    Contraseña es requerida.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.minlength">
+    Debe contener 5 caracteres minimo
+    </span>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Ingresa tu Email</ion-label>
+      <ion-input formControlName="email" type="email"  [(ngModel)]="email"></ion-input>
+    </ion-item>
+    
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+    Email es requerido.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+    Ingrese un email Valido
+    </span>
+
+    <br>
+
+    <ion-row>
+      <ion-col>
+        <ion-button  class="centrar" type="submit" color="success" expand="block">Registrarse</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+
+  <br>
+
+  <ion-button  class="centrar" expand="block" (click)="volver()">VOLVER</ion-button>
+
+</ion-content>

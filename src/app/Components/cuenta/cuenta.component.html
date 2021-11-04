@@ -1,0 +1,27 @@
+<ion-content >
+  <ion-item>
+    <ion-icon name="person" item-start large></ion-icon>
+    &nbsp; 
+    <h4  class="bienvenido" >Nombre: {{ user }} </h4>
+  </ion-item>
+  
+  <ion-item>
+      <ion-label >Correo: {{ user }}@duocuc.cl</ion-label>
+  </ion-item>
+  <ion-item>
+      <ion-label>Saldo:</ion-label>
+      <ion-badge color="success" slot="end">$2500</ion-badge>
+  </ion-item>
+  <ion-item>
+    <ion-label >Telefono: +569 12345678</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label >Carrera: Ingenieria en Informatica</ion-label>
+  </ion-item>  
+  <br><br><br>
+
+  <ion-button class="centrar" expand="block" (click)="salir()">SALIR</ion-button> 
+
+</ion-content>
+
+
