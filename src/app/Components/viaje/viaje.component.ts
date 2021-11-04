@@ -141,6 +141,7 @@ export class ViajeComponent implements OnInit {
         zoom: 15,
         disableDefaultUI: true
       }
+      
       this.map = new google.maps.Map( this.mapRef.nativeElement, options );
 
       this.marker = new google.maps.Marker({

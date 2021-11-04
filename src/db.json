@@ -5,20 +5,20 @@
       "nombre": "jorge",
       "email": "jo@gmail.com",
       "active": true
+    },
+    {
+      "id": 2,
+      "nombre": "hola",
+      "email": "isa@gmail.com",
+      "active": true
     }
   ],
   "posts": [
     {
       "userId": 1,
       "id": 1,
-      "title": "En Paz :)",
-      "body": "en medio de la tormenta"
-    },
-    {
-      "userId": 1,
-      "id": 2,
-      "title": "Muestra",
-      "body": "ahora una sonrisa :)"
+      "title": "Funcionando ",
+      "body": "Bien!!!"
     }
   ]
 }
